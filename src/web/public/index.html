@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameForge - Game Engine Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">GameForge</div>
+        <nav>
+            <ul>
+                <li><a href="#" id="project-info">Project Info</a></li>
+                <li><a href="#" id="scenes-list">Scenes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="sidebar">
+            <div class="section">
+                <h3>Scene Hierarchy</h3>
+                <div id="scene-hierarchy"></div>
+            </div>
+            <div class="section">
+                <h3>Properties</h3>
+                <div id="properties-panel"></div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="toolbar">
+                <select id="scene-selector">
+                    <option value="">-- Select Scene --</option>
+                </select>
+                <button id="play-button">▶️ Play</button>
+                <button id="pause-button">⏸️ Pause</button>
+                <button id="reset-button">🔄 Reset</button>
+            </div>
+            
+            <div class="viewer-container">
+                <div id="scene-viewer"></div>
+                <div id="loading-indicator">Loading...</div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>GameForge - Text-based Game Development Framework</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
